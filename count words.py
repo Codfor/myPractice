@@ -43,13 +43,24 @@ the_list = list()
 split_words = read_file.split() # to split the text file into word by word
 dic_list =dict()
 print(split_words)
+
+# for w in split_words:
+#     if w not in dic_list: # if the word is not in the dictionary the added it
+#         dic_list[w] = 1
+#     else: # otherwise add 1 to it to count how many times it wad mentioned in the file
+#         dic_list[w]= dic_list[w]+1
+# print(dic_list)
+
 for w in split_words:
-    if w not in dic_list: # if the word is not in the dictionary the added it
-        dic_list[w] = 1
-    else: # otherwise add 1 to it to count how many times it wad mentioned in the file
-        dic_list[w]= dic_list[w]+1
-print(dic_list)
+    dic_list[w] = dic_list.get(w, 0) + 1 # count how many time the words mentioned. similar to above example but with less words
+# print(dic_list)
+
+# for x in dic_list:
+#     print(x,dic_list[x]) # print the key (x) and the value
+
+print(list(dic_list)) # print a list without values from the dictionary
+
+print(dic_list.values()) # print only the values of the dictionary
 
 
-
-
+print(dic_list.items()) # create tuple from a dictionary
