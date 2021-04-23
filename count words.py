@@ -31,7 +31,6 @@ read_file = my_file.read()
 # ##create a list without spaces from the text file
 # the_list = list()
 # split_words = read_file.split() # to split the text file into word by word
-
 # for w in split_words:
 #     if w == ' ':
 #         continue
